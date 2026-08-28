@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchTrack - Your Results</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carbon.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">ArchTrack</a>
+        </div>
+
+        <nav>
+            <a href="index.html#home">Home</a>
+
+            <div class="dropdown">
+                <a href="#">About ▼</a>
+                <div class="dropdown-menu">
+                    <a href="contactus.html">Contact Us</a>
+                    <a href="lm.html">Learn More</a>
+                </div>
+            </div>
+
+            <a href="login.html" id="login-btn">Log In</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-page">
+        <div class="dashboard-container">
+         
+            <div id="loading-state" class="loading-state">
+                <div class="loading-spinner"></div>
+                <p id="loading-text">Fetching details...</p>
+            </div>
+
+           
+            <div id="main-dashboard" style="display: none;">
+                <div class="dashboard-header">
+                    <div>
+                        <h1>Your <span>ArchTrack</span> Report</h1>
+                        <p>Estimated environmental impact based on your inputs.</p>
+                    </div>
+
+                    <select class="month-selector">
+                        <option value="current">August 2026 (Current)</option>
+                        <option value="previous">July 2026 (Previous)</option>
+                    </select>
+                </div>
+
+               
+                <section class="score-section">
+                    <div class="score-title">Monthly Carbon Footprint</div>
+                    <div class="score-display">
+                        <span id="total-score" class="score-value"></span>
+                        <span class="score-unit">kg CO₂</span>
+                    </div>
+
+                    <div id="trend-badge" class="trend-badge positive" style="display: none;"></div>
+                </section>
+
+               
+                <section class="breakdown-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🚗</div>
+                        <div class="category-name">Travel</div>
+                        <div id="travel-score" class="category-value"></div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">⚡</div>
+                        <div class="category-name">Electricity</div>
+                        <div id="electricity-score" class="category-value"></div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🥗</div>
+                        <div class="category-name">Diet</div>
+                        <div id="diet-score" class="category-value"></div>
+                    </div>
+                </section>
+
+               
+                <section class="tips-section">
+                    <h2>💡 Concrete Reduction Tips</h2>
+
+                    <div class="tip-card">
+                        <h3>1. Optimize Your Commute</h3>
+                        <p id="tip-1"></p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3>2. Upgrade Your Lighting</h3>
+                        <p id="tip-2"></p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3>3. Adopt Meatless Mondays</h3>
+                        <p id="tip-3"></p>
+                    </div>
+                </section>
+
+                
+                <div class="actions">
+                    <a href="calc.html" class="btn btn-secondary">Recalculate</a>
+                    <a href="index.html" class="btn btn-primary">Save to Profile</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ArchTrack © 2026</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/carbon.js"></script>
+</body>
+
+</html>
